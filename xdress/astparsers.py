@@ -455,7 +455,7 @@ class ParserPlugin(Plugin):
         rcdocs = self.rcdocs() if callable(self.rcdocs) else self.rcdocs
         parser.add_argument('-I', '--includes', action='store', dest='includes',
                             nargs="+", help=rcdocs["includes"])
-        parser.add_argument('-D', '--defines', action='append', dest='defines',
+        parser.add_argument('-D', '--defines', action='store', dest='defines',
                             nargs="+", help=rcdocs["defines"])
         parser.add_argument('-U', '--undefines', action='append', dest='undefines',
                             nargs="+", type=str, help=rcdocs["undefines"])
